@@ -1,0 +1,53 @@
+        <div ng-controller="groupCtrl">
+        			
+                    
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <i class="mdi-action-search prefix"></i>
+                            <input id="icon_prefix" type="text" class="validate" ng-model="searchText[by]">
+                            <label for="icon_prefix">Recherche</label>
+                          </div>
+                        </div>
+                      </form>
+                    
+                    <div class="row">
+            			<ul class="collection">
+                            <li class="collection-item" ng-repeat="result in results | filter:searchText">
+                                <a href="#group/{{result.id}}">
+                                    <span class="title">
+                                        <b>
+                                            Connect Group - {{result.name}} |
+                                        </b> 
+                                        <span class="teal lighten-2 postcode">
+                                            {{result.postcode}}
+                                        </span>
+                                       
+
+                                    </span>
+                                </a>
+                                     <a href="#!" class="secondary-content"><i class="mdi-social-notifications-on"></i></a> 
+                                    <div>
+                                        <span class="grey-text">
+                                                {{result.leader}} - 
+                                                <i class="mdi-action-question-answer"></i> {{result.language}}
+                                        </span><br>
+                                        <span class="small-text">
+                                                <i class="mdi-maps-directions-subway"></i> {{result.metro}}
+                                        </span>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                        <a class="btn-floating btn-large red">
+                          <i class="large mdi-editor-mode-edit"></i>
+                        </a>
+                        <ul>
+                          <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
+                          <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
+                          <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
+                          <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
+                        </ul>
+                      </div> -->
+        </div>

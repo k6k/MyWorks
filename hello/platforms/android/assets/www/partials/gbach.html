@@ -1,0 +1,12 @@
+<div ng-controller="userCtrl">
+			{{name}}
+			<button class="button" ng-click="refresh()">Refresh</button>
+	<table>
+            <tr ng-repeat="result in results">
+                <td>{{result.id}}</td>
+                <!-- <td ng-bind-html="{{result.login}}"></td> -->
+                <td>{{result.login}}</td>
+                <td>&nbsp; {{result.mail}} </td>
+            </tr>               
+    </table>
+</div>

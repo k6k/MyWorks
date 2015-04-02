@@ -1,0 +1,19 @@
+        <div ng-controller="eventCtrl">
+        			   
+                  <div class="row">
+            			 <ul class="collection">
+                      <li class="collection-item avatar" ng-repeat="result in results">
+                        <img src="img/event-1.jpg" alt="" class="circle">
+                        <span class="title"><b>{{result.title}}</b> - 
+                                <span class="teal lighten-2 postcode">{{result.date_event * 1000 | date:'dd-MM-yyyy'}}</span>
+                        </span>
+                        <p>
+                            <i class="mdi-action-alarm"></i>{{result.hour}} -
+                           
+                            <span class="grey-text"><i class="mdi-maps-directions-subway"></i> {{result.metro}} : {{result.address}} </span>
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-stars"></i></a>
+                      </li>   
+                   </ul>
+                  </div>
+        </div>
